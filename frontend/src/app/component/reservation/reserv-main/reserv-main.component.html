@@ -1,5 +1,5 @@
 
-
+<
 
     <div *ngIf="test(0)">
         <div class="progress" style="width:700px"> 
@@ -33,16 +33,16 @@
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample">
       <ul class="navbar-nav">
         <li class="nav-item active">
-            <button type="button" class="btn btn-success" id="Bouton" ng-click="" >1</button>
+            <button type="button" class="btn btn-success" id="Bouton" (click)="change(0)" >1</button>
         </li>
         <li class="nav-item">
-            <button type="button" class="btn btn-success" id="Bouton">2</button>
+            <button type="button" class="btn btn-success" id="Bouton" (click)="change(1)">2</button>
         </li>
         <li class="nav-item">
-            <button type="button" class="btn btn-success" id="Bouton">3</button>
+            <button type="button" class="btn btn-success" id="Bouton" (click)="change(2)">3</button>
         </li>
         <li class="nav-item ">
-            <button type="button" class="btn btn-success" id="Bouton">4</button>
+            <button type="button" class="btn btn-success" id="Bouton" (click)="change(3)">4</button>
         </li>
       </ul>
     </div>
@@ -50,7 +50,26 @@
 
 <div class="reserv">
 
+    <ng-container *ngIf="test(0)">
+        <app-reserv-dispos></app-reserv-dispos>
+    </ng-container>
+
+    <ng-container *ngIf="test(1)">
+        <app-reserv-infos-clients></app-reserv-infos-clients>
+    </ng-container>
+
+    <ng-container *ngIf="test(2)">
+        <app-reserv-confirm></app-reserv-confirm>
+    </ng-container>
+
+    <ng-container *ngIf="test(3)">
+        <app-reserv-paiement></app-reserv-paiement>
+    </ng-container>
+
+    
+
+    
 </div>
 
-<app-reserv-dispos></app-reserv-dispos>
+
 <p>reserv-main works!</p>

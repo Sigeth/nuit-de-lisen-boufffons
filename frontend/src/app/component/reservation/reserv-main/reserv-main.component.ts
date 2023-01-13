@@ -14,7 +14,9 @@ export class ReservMainComponent {
   }
 
   change(nombre:number):void{
+    console.log("test ?")
     this.step = nombre
+    
   }
 
 }
