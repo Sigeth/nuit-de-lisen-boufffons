@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ReservMainComponent {
 
+  step: number = 0;
+
+  test(nombre:number):boolean{
+    return this.step==nombre;
+  }
+
+  change(nombre:number):void{
+    this.step = nombre
+  }
+
 }
