@@ -1,8 +1,13 @@
-.image-1{
+.p-2 img{
     height:300px;
     width: 400px;
     
 }
-.block-1{
-    padding-left:100px;
+.d-flex {
+    padding:30px;
+    
+}
+
+.btn .btn-danger{
+        border:none;
 }

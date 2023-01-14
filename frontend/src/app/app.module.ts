@@ -11,6 +11,8 @@ import { ReservDisposComponent } from './component/reservation/reserv-dispos/res
 import { ReservInfosClientsComponent } from './component/reservation/reserv-infos-clients/reserv-infos-clients.component';
 import { ReservConfirmComponent } from './component/reservation/reserv-confirm/reserv-confirm.component';
 import { ReservPaiementComponent } from './component/reservation/reserv-paiement/reserv-paiement.component';
+import { ChambresComponent } from './component/chambres/chambres.component';
+import { TourismeLocaleComponent } from './component/tourisme-locale/tourisme-locale.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ReservPaiementComponent } from './component/reservation/reserv-paiement
     ReservDisposComponent,
     ReservInfosClientsComponent,
     ReservConfirmComponent,
-    ReservPaiementComponent
+    ReservPaiementComponent,
+    ChambresComponent,
+    TourismeLocaleComponent
   ],
   imports: [
     BrowserModule,
