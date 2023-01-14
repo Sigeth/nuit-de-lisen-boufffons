@@ -13,6 +13,13 @@ import { ReservConfirmComponent } from './component/reservation/reserv-confirm/r
 import { ReservPaiementComponent } from './component/reservation/reserv-paiement/reserv-paiement.component';
 import { ChambresComponent } from './component/chambres/chambres.component';
 import { TourismeLocaleComponent } from './component/tourisme-locale/tourisme-locale.component';
+import {RoomRequestsService} from "./service/room-requests.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -30,9 +37,18 @@ import { TourismeLocaleComponent } from './component/tourisme-locale/tourisme-lo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [
+    RoomRequestsService,
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
