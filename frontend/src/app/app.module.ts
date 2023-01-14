@@ -11,6 +11,13 @@ import { ReservDisposComponent } from './component/reservation/reserv-dispos/res
 import { ReservInfosClientsComponent } from './component/reservation/reserv-infos-clients/reserv-infos-clients.component';
 import { ReservConfirmComponent } from './component/reservation/reserv-confirm/reserv-confirm.component';
 import { ReservPaiementComponent } from './component/reservation/reserv-paiement/reserv-paiement.component';
+import {RoomRequestsService} from "./service/room-requests.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -26,9 +33,15 @@ import { ReservPaiementComponent } from './component/reservation/reserv-paiement
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [ RoomRequestsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

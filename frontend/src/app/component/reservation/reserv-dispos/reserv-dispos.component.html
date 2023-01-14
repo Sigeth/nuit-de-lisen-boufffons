@@ -1,1 +1,16 @@
-<p>reserv-dispos works!</p>
+<div class="container-fluid d-flex justify-content-center">
+  <div class="d-flex flex-column">
+    <div class="bd-highlight d-flex justify-content-center">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" #startDate>
+          <input matEndDate placeholder="End date" #endDate (dateChange)="dateRangeChange(startDate, endDate)">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
