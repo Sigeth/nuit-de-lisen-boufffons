@@ -18,11 +18,14 @@ export class ReservDisposComponent {
       end_date: endDate.value
     };
 
-    console.log(roomRequest);
-    this.roomRequestService.requestRoomsByDate(roomRequest).subscribe({
+    /*this.roomRequestService.requestRoomsByDate(roomRequest).subscribe({
       next: (data) => {
         this.available_rooms = data;
       }
-    });
+    });*/
+
+    this.available_rooms = [
+      1,2,3,4
+    ]
   }
 }

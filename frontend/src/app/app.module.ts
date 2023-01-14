@@ -17,7 +17,7 @@ import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatInputModule} from "@angular/material/input";
-import {MatNativeDateModule} from "@angular/material/core";
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -41,7 +41,10 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatInputModule,
     MatNativeDateModule
   ],
-  providers: [ RoomRequestsService ],
+  providers: [
+    RoomRequestsService,
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
